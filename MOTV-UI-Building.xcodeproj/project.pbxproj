@@ -10,6 +10,8 @@
 		7F03B09826E3B32200B04E2E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F03B09726E3B32200B04E2E /* MapViewModel.swift */; };
 		7F03B09A26E3B6B400B04E2E /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F03B09926E3B6B400B04E2E /* LocationServices.swift */; };
 		7F03B09C26E4078B00B04E2E /* EventCreationInviteesForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F03B09B26E4078B00B04E2E /* EventCreationInviteesForm.swift */; };
+		7F062C4F26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F062C4E26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift */; };
+		7F6AB50526E81C42001FEF27 /* EventCreationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AB50426E81C42001FEF27 /* EventCreationDetailsViewModel.swift */; };
 		7F71407B26E2AE9300C70341 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71407A26E2AE9300C70341 /* LocationPicker.swift */; };
 		7F7F6AD326DEF626009DCEEC /* EventCreationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F6AD226DEF626009DCEEC /* EventCreationForm.swift */; };
 		7FA9FEB726DD3A8D00B732D7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9FEB626DD3A8D00B732D7 /* Colors.xcassets */; };
@@ -21,12 +23,17 @@
 		7FB8F84B26D031A100261AB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB8F84A26D031A100261AB1 /* Preview Assets.xcassets */; };
 		7FC946E126DED27400B6FE1B /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC946E026DED27300B6FE1B /* FontManager.swift */; };
 		7FC946E326DEDAB800B6FE1B /* ModelElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC946E226DEDAB800B6FE1B /* ModelElements.swift */; };
+		7FDC879226EFA01300174C6C /* EventCreationInviteesForm2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC879126EFA01300174C6C /* EventCreationInviteesForm2.swift */; };
+		7FFDD93026FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDD92F26FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift */; };
+		7FFDD93226FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDD93126FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F03B09726E3B32200B04E2E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		7F03B09926E3B6B400B04E2E /* LocationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		7F03B09B26E4078B00B04E2E /* EventCreationInviteesForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationInviteesForm.swift; sourceTree = "<group>"; };
+		7F062C4E26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationInviteesFormViewModel.swift; sourceTree = "<group>"; };
+		7F6AB50426E81C42001FEF27 /* EventCreationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationDetailsViewModel.swift; sourceTree = "<group>"; };
 		7F71407A26E2AE9300C70341 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
 		7F7F6AD226DEF626009DCEEC /* EventCreationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationForm.swift; sourceTree = "<group>"; };
 		7FA9FEB626DD3A8D00B732D7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -40,6 +47,9 @@
 		7FB8F84C26D031A100261AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FC946E026DED27300B6FE1B /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		7FC946E226DEDAB800B6FE1B /* ModelElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelElements.swift; sourceTree = "<group>"; };
+		7FDC879126EFA01300174C6C /* EventCreationInviteesForm2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationInviteesForm2.swift; sourceTree = "<group>"; };
+		7FFDD92F26FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationSecondaryDetailsForm.swift; sourceTree = "<group>"; };
+		7FFDD93126FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationActivitiesFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F6AB50326E81C0B001FEF27 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7F03B09726E3B32200B04E2E /* MapViewModel.swift */,
+				7F6AB50426E81C42001FEF27 /* EventCreationDetailsViewModel.swift */,
+				7F062C4E26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift */,
+				7FFDD93126FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		7F71407826E2AC6100C70341 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7F71407926E2AC6E00C70341 /* Event Creation Form */,
 				7FB8F84526D0319600261AB1 /* ContentView.swift */,
+				7F71407926E2AC6E00C70341 /* Event Creation Form */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -65,9 +86,9 @@
 		7F71407926E2AC6E00C70341 /* Event Creation Form */ = {
 			isa = PBXGroup;
 			children = (
-				7F03B09B26E4078B00B04E2E /* EventCreationInviteesForm.swift */,
-				7F7F6AD226DEF626009DCEEC /* EventCreationForm.swift */,
-				7F71407A26E2AE9300C70341 /* LocationPicker.swift */,
+				7FDC878C26EF982600174C6C /* Primary Details Form */,
+				7FDC878D26EF983500174C6C /* Invitees Form */,
+				7FFDD92E26FCEEB8003763D6 /* Secondary Details Form */,
 			);
 			path = "Event Creation Form";
 			sourceTree = "<group>";
@@ -99,8 +120,8 @@
 		7FB8F84226D0319600261AB1 /* MOTV-UI-Building */ = {
 			isa = PBXGroup;
 			children = (
-				7F03B09726E3B32200B04E2E /* MapViewModel.swift */,
 				7F03B09926E3B6B400B04E2E /* LocationServices.swift */,
+				7F6AB50326E81C0B001FEF27 /* ViewModels */,
 				7F71407826E2AC6100C70341 /* Views */,
 				7FC946E226DEDAB800B6FE1B /* ModelElements.swift */,
 				7FC946E026DED27300B6FE1B /* FontManager.swift */,
@@ -121,6 +142,32 @@
 				7FB8F84A26D031A100261AB1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7FDC878C26EF982600174C6C /* Primary Details Form */ = {
+			isa = PBXGroup;
+			children = (
+				7F7F6AD226DEF626009DCEEC /* EventCreationForm.swift */,
+				7F71407A26E2AE9300C70341 /* LocationPicker.swift */,
+			);
+			path = "Primary Details Form";
+			sourceTree = "<group>";
+		};
+		7FDC878D26EF983500174C6C /* Invitees Form */ = {
+			isa = PBXGroup;
+			children = (
+				7F03B09B26E4078B00B04E2E /* EventCreationInviteesForm.swift */,
+				7FDC879126EFA01300174C6C /* EventCreationInviteesForm2.swift */,
+			);
+			path = "Invitees Form";
+			sourceTree = "<group>";
+		};
+		7FFDD92E26FCEEB8003763D6 /* Secondary Details Form */ = {
+			isa = PBXGroup;
+			children = (
+				7FFDD92F26FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift */,
+			);
+			path = "Secondary Details Form";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFDD93026FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift in Sources */,
 				7FC946E326DEDAB800B6FE1B /* ModelElements.swift in Sources */,
 				7F03B09A26E3B6B400B04E2E /* LocationServices.swift in Sources */,
+				7F062C4F26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift in Sources */,
+				7FDC879226EFA01300174C6C /* EventCreationInviteesForm2.swift in Sources */,
 				7FA9FEB926DD3FB300B732D7 /* ColorManager.swift in Sources */,
+				7F6AB50526E81C42001FEF27 /* EventCreationDetailsViewModel.swift in Sources */,
 				7FB8F84626D0319600261AB1 /* ContentView.swift in Sources */,
 				7FC946E126DED27400B6FE1B /* FontManager.swift in Sources */,
+				7FFDD93226FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift in Sources */,
 				7FB8F84426D0319600261AB1 /* MOTV_UI_BuildingApp.swift in Sources */,
 				7F03B09C26E4078B00B04E2E /* EventCreationInviteesForm.swift in Sources */,
 				7F71407B26E2AE9300C70341 /* LocationPicker.swift in Sources */,

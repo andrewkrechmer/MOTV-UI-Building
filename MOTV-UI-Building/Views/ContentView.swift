@@ -49,6 +49,7 @@ struct EventsView: View {
             }
         }.sheet(isPresented: $presentEventCreationForm, content: {
             EventCreationForm()
+                .environmentObject(EventCreationDetialsViewModel())
         })
 
     }

@@ -23,6 +23,6 @@ struct ThemeColors {
     
     static let colorSet: [Color] = [Color("Orange"), Color("Yellow"), Color("Red"), Color("Purple")]
     
-    static let red: Color = Color("Red")
+    static let yellow: Color = Color("Yellow")
 
 }

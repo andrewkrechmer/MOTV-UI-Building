@@ -12,12 +12,7 @@ import MapKit
 
 struct EventCreationForm: View {
     
-    @State var eventDetailsAreValid: Bool = false
-    
-    @State var eventName: String = ""
-    @State var startDate: Date = Date()
-    @State var endDate: Date = Date()
-    @State var location: SavedLocation = SavedLocation(commonName: "", addressString: "", latitude: 0, longitude: 0)
+    @EnvironmentObject var viewModel: EventCreationDetialsViewModel
     
     @State var includeEndDate = true
     
@@ -38,30 +33,43 @@ struct EventCreationForm: View {
             
             VStack(alignment: .leading, spacing: 15) {
                 
+                HStack() {
+                    Spacer()
+                    NavigationLink(
+                        destination: EventCreationInviteesForm2(),
+                        label: {
+                            EventCreationFormNavigationButtonView(active: $viewModel.formIsValid, text: "Friends")
+                        })
+                        //.disabled(!viewModel.formIsValid)
+                }
+                .padding(.top, 12)
+                .padding(.bottom, 12)
+                
                 // ---- Event name text field
                 
-                TextField("Event Name", text: $eventName) { editing in
+                TextField("Event Name", text: $viewModel.eventName) { editing in
                     eventNameFieldIsSelected = editing
                 } onCommit: {
                     
                 }
                 .font(.system(size: 16, weight: .medium, design: .default))
                 .fieldModifier($eventNameFieldIsSelected)
-                .onChange(of: eventName) { value in }
+                .onChange(of: viewModel.eventName) { value in }
                 .padding(.bottom, 6)
                 
                 
                 // ---- Start date and time fields
                 
-                DatePicker("Starts", selection: $startDate, in: Date()...Date(timeIntervalSinceNow: 31536000), displayedComponents: [ .hourAndMinute, .date])
+                DatePicker("Starts", selection: $viewModel.startDate, in: Date()...Date(timeIntervalSinceNow: 31536000), displayedComponents: [ .hourAndMinute, .date])
                     .datePickerStyle(DefaultDatePickerStyle())
                     .padding(.horizontal, 12)
                     
                     
                 // ---- End date and time fields
                 
+                
                 if includeEndDate {
-                    DatePicker("Ends", selection: $startDate, in: Date()...Date(timeIntervalSinceNow: 31536000), displayedComponents: [ .hourAndMinute, .date])
+                    DatePicker("Ends", selection: $viewModel.endDate, in: Date()...Date(timeIntervalSinceNow: 31536000), displayedComponents: [ .hourAndMinute, .date])
                         .datePickerStyle(DefaultDatePickerStyle())
                         .padding(.horizontal, 12)
                 }
@@ -90,7 +98,7 @@ struct EventCreationForm: View {
                 } label: {
                     ZStack {
                         
-                        Text(location.commonName)
+                        Text(viewModel.location.commonName)
                             .font(.system(size: 16, weight: .medium, design: .default))
                             .foregroundColor(locationFieldIsActive ? .primary : Color(UIColor.systemGray3))
                             .fieldModifier($locationFieldIsSelected)
@@ -108,12 +116,8 @@ struct EventCreationForm: View {
                 
                 Spacer()
             }
-           .padding(.horizontal, 20.0)
-            .navigationBarItems(trailing:
-                NavigationLink(destination: EventCreationInviteesForm(), label: {
-                EventCreationFormNavigationButtonView(active: $eventDetailsAreValid, text: "Next")
-            })
-)
+            .padding(.horizontal, 20.0)
+            .navigationBarHidden(true)
             
         }
         .background(Color.backGroundColor)
@@ -121,7 +125,7 @@ struct EventCreationForm: View {
             hideKeyboard()
         }
         .sheet(isPresented: $locationFieldIsSelected) {
-            LocationPicker(mapModel: MapViewModel(), savedLocations: TestData.testSavedLocations, locationSelection: $location)
+            LocationPicker(mapModel: MapViewModel(), savedLocations: TestData.testSavedLocations, locationSelection: $viewModel.location)
         }
         
     }
@@ -135,29 +139,20 @@ struct  EventCreationFormNavigationButtonView: View {
     
     var body: some View {
         
-        ZStack {
-         
-//            if !active {
-//
-//                RoundedRectangle(cornerRadius: 15)
-//                    .foregroundColor(Color(UIColor.systemGray6).opacity(0.7))
-//                    .zIndex(1)
-//
-//            }
-            
-            Text(text)
-                .font(FontManager(typeFace: .GTAmericaExtendedBoldItalic, size: 12).requestedFont)
-                .padding(.horizontal, 18)
-                .padding(.vertical, 8)
-                .background(
-                    RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(.primary).opacity(0.1)
-                        .background(RoundedRectangle(cornerRadius: 15).strokeBorder(lineWidth: 1).foregroundColor(MOTV_UI_BuildingApp.themeColor).opacity(0.5))
-                )
-                .zIndex(0)
-            
-        }
-        
+        Text(text)
+            .font(FontManager(typeFace: .GTAmericaExtendedBoldItalic, size: 12).requestedFont)
+            .foregroundColor(.primary)
+            .padding(.horizontal, 18)
+            .padding(.vertical, 6)
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(.primary).opacity(0.1)
+                    .background(RoundedRectangle(cornerRadius: 15).strokeBorder(lineWidth: 1).foregroundColor(MOTV_UI_BuildingApp.themeColor).opacity(0.9))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .foregroundColor(!active ? Color(UIColor.systemGray6).opacity(0.7) : .clear)
+            )
     }
     
 }

@@ -17,8 +17,8 @@ struct EventCreationInviteesForm: View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 15).stroke(lineWidth: 3.0).foregroundColor(MOTV_UI_BuildingApp.themeColor)
-                .frame(width: rects[activeTabIndex].size.width, height: rects[activeTabIndex].size.height)
-//                .offset(x: rects[activeTabIndex].minX, y: rects[activeTabIndex].minY)
+                .frame(width: rects[activeTabIndex].size.width, height: rects[activeTabIndex].size.height, alignment: .center)
+                .offset(x: rects[activeTabIndex].minX, y: rects[activeTabIndex].minY)
                 .zIndex(1)
                 .animation(.easeInOut(duration: 1.0))
                 
@@ -30,8 +30,6 @@ struct EventCreationInviteesForm: View {
                     InviteesFormTab(activeTab: $activeTabIndex, tabName: "Groups", tabIndex: 1)
                     InviteesFormTab(activeTab: $activeTabIndex, tabName: "Friends", tabIndex: 2)
                 }
-                .padding(.horizontal, 35)
-                .padding(.vertical, 12)
                 .background(RoundedRectangle(cornerRadius: 8).fill(Color.foreGroundColor))
                 .zIndex(0)
                 
@@ -64,10 +62,11 @@ struct InviteesFormTab: View {
     var body: some View {
         
         Text(tabName)
-            .background(PreferenceViewSetter(index: tabIndex))
             .onTapGesture {
                 self.activeTab = self.tabIndex
             }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            .background(PreferenceViewSetter(index: tabIndex))
     }
     
 }

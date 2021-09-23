@@ -139,7 +139,7 @@ struct LocationListItem: View {
 
 // MARK: - Location Model
 
-struct SavedLocation: Codable, Identifiable {
+struct SavedLocation: Codable, Identifiable, Equatable {
     var commonName: String
     var addressString: String
     var type: String?
