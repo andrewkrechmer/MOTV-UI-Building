@@ -8,18 +8,16 @@
 import SwiftUI
 import Combine
 
-class EventCreationDetialsViewModel: ObservableObject {
-    
-    @Published var eventName: String = ""
-    @Published var startDate: Date = Date()
-    @Published var endDate: Date = Date()
-    @Published var location: SavedLocation = SavedLocation(commonName: "", addressString: "", latitude: 0, longitude: 0)
+class EventCreationDetialsViewModel: EventCreationFormViewModel {
     
     @Published var formIsValid: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    override init() {
+        
+        super.init()
+        
         eventDetailsAreValidPublisher
             .receive(on: RunLoop.main)
             .assign(to: \.formIsValid, on: self)

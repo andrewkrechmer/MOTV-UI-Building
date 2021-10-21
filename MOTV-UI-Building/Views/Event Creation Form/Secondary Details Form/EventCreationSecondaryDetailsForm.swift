@@ -18,6 +18,8 @@ struct EventCreationSecondaryDetailsForm: View {
     @State var backButtonActive: Bool = true;
     @State var searchFieldIsSelected: Bool = false;
     
+    @Binding var presentEventCreationForm: Bool
+    
     var body: some View {
         
         NavigationView {
@@ -40,7 +42,8 @@ struct EventCreationSecondaryDetailsForm: View {
                     })
                     
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                        viewModel.postEvent()
+                        presentEventCreationForm = false
                     }, label: {
                         EventCreationFormNavigationButtonView(active: $backButtonActive, text: "Post")
                     })
@@ -107,8 +110,8 @@ struct EventCreationSecondaryDetailsForm: View {
     }
 }
 
-struct EventCreationActivitiesForm_Previews: PreviewProvider {
-    static var previews: some View {
-        EventCreationSecondaryDetailsForm()
-    }
-}
+//struct EventCreationActivitiesForm_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventCreationSecondaryDetailsForm(presentEventCreationForm: $presentEventCreationForm)
+//    }
+//}

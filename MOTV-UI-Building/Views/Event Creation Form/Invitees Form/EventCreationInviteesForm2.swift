@@ -16,6 +16,8 @@ struct EventCreationInviteesForm2: View {
     @State var chosenTab: Int = 3
     @State var backButtonActive: Bool = true
     
+    @Binding var presentEventCreationForm: Bool
+    
     var body: some View {
         
         NavigationView {
@@ -31,7 +33,7 @@ struct EventCreationInviteesForm2: View {
                             EventCreationFormNavigationButtonView(active: $backButtonActive, text: "Details")
                         })
                         Spacer()
-                        NavigationLink(destination: EventCreationSecondaryDetailsForm(), label: {
+                        NavigationLink(destination: EventCreationSecondaryDetailsForm(presentEventCreationForm: $presentEventCreationForm), label: {
                             EventCreationFormNavigationButtonView(active: $viewModel.formIsValid, text: "Activites")
                         }).disabled(!viewModel.formIsValid)
                     }
@@ -206,9 +208,9 @@ private struct FriendsView: View {
 
 // MARK: - Previews
 
-struct EventCreationInviteesForm2_Previews: PreviewProvider {
-    static var previews: some View {
-        EventCreationInviteesForm2()
-        
-    }
-}
+//struct EventCreationInviteesForm2_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventCreationInviteesForm2()
+//        
+//    }
+//}

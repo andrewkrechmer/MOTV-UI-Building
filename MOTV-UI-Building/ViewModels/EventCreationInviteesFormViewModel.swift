@@ -8,11 +8,7 @@
 import SwiftUI
 import Combine
 
-class EventCreationInviteesFormViewModel: ObservableObject {
-    
-    @Published var invitees: [Int] = []
-    @Published var minimumAttendees: Int = 0
-    @Published var maximumAttendees: Int = 35
+class EventCreationInviteesFormViewModel: EventCreationFormViewModel {
     
     @Published var formIsValid: Bool = false
     
@@ -20,7 +16,10 @@ class EventCreationInviteesFormViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    override init() {
+        
+        super.init()
+        
         eventInviteesFormIsValid
             .receive(on: RunLoop.main)
             .assign(to: \.formIsValid, on: self)

@@ -7,10 +7,14 @@
 
 import Foundation
 
-class EventCreationActivitiesFormViewModel: ObservableObject {
-    
-    @Published var activities: [SecondaryInfo] = []
+class EventCreationActivitiesFormViewModel: EventCreationFormViewModel {
     
     @Published var formIsValid: Bool = false
+    
+    override init() {
+        
+        super.init()
+        
+    }
     
 }

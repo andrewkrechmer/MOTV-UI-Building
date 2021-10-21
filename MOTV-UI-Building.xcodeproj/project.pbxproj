@@ -26,6 +26,7 @@
 		7FDC879226EFA01300174C6C /* EventCreationInviteesForm2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC879126EFA01300174C6C /* EventCreationInviteesForm2.swift */; };
 		7FFDD93026FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDD92F26FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift */; };
 		7FFDD93226FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDD93126FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift */; };
+		7FFDD93626FD5A9A003763D6 /* EventCreationFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDD93526FD5A9A003763D6 /* EventCreationFormViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		7FDC879126EFA01300174C6C /* EventCreationInviteesForm2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationInviteesForm2.swift; sourceTree = "<group>"; };
 		7FFDD92F26FCF186003763D6 /* EventCreationSecondaryDetailsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationSecondaryDetailsForm.swift; sourceTree = "<group>"; };
 		7FFDD93126FCF3FB003763D6 /* EventCreationActivitiesFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationActivitiesFormViewModel.swift; sourceTree = "<group>"; };
+		7FFDD93526FD5A9A003763D6 /* EventCreationFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCreationFormViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		7F6AB50326E81C0B001FEF27 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				7FFDD93526FD5A9A003763D6 /* EventCreationFormViewModel.swift */,
 				7F03B09726E3B32200B04E2E /* MapViewModel.swift */,
 				7F6AB50426E81C42001FEF27 /* EventCreationDetailsViewModel.swift */,
 				7F062C4E26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift */,
@@ -245,6 +248,7 @@
 				7FC946E326DEDAB800B6FE1B /* ModelElements.swift in Sources */,
 				7F03B09A26E3B6B400B04E2E /* LocationServices.swift in Sources */,
 				7F062C4F26F4D8C1005B85D1 /* EventCreationInviteesFormViewModel.swift in Sources */,
+				7FFDD93626FD5A9A003763D6 /* EventCreationFormViewModel.swift in Sources */,
 				7FDC879226EFA01300174C6C /* EventCreationInviteesForm2.swift in Sources */,
 				7FA9FEB926DD3FB300B732D7 /* ColorManager.swift in Sources */,
 				7F6AB50526E81C42001FEF27 /* EventCreationDetailsViewModel.swift in Sources */,

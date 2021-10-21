@@ -20,10 +20,15 @@ struct EventCreationForm: View {
     @State var locationFieldIsSelected: Bool = false
     @State var locationFieldIsActive: Bool = false
     
+    @Binding var presentEventCreationForm: Bool
+    
     let dateFormatter = DateFormatter()
-    init() {
+    init(presentEventCreationForm: Binding<Bool>) {
+        
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
+        
+        self._presentEventCreationForm = presentEventCreationForm
     }
 
     
@@ -36,7 +41,7 @@ struct EventCreationForm: View {
                 HStack() {
                     Spacer()
                     NavigationLink(
-                        destination: EventCreationInviteesForm2(),
+                        destination: EventCreationInviteesForm2(presentEventCreationForm: $presentEventCreationForm),
                         label: {
                             EventCreationFormNavigationButtonView(active: $viewModel.formIsValid, text: "Friends")
                         })
@@ -217,16 +222,16 @@ extension View {
 
 // MARK: - Previews
 
-struct EventCreationForm_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        EventCreationForm()
-            .previewDevice("iPhone 11")
-            .preferredColorScheme(.dark)
-        
-
-    }
-}
+//struct EventCreationForm_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//        EventCreationForm(presentEventCreationForm: $presentEventCreationForm)
+//            .previewDevice("iPhone 11")
+//            .preferredColorScheme(.dark)
+//
+//
+//    }
+//}
 
 
 /*
